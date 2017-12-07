@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+	<title>Adam's Horse Race Game</title>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<p id="unicorn-instructions">Tap <span class="bigger"> A </span> to make Player 2 GO!</p>
+			<p id="brownHorse-instructions">Tap <span class="bigger"> L </span> to make Player 1 GO!</p>
+			<h1 class="animated slideInLeft reset-animation">Adam's Horse Race Game!😀</h1>
+
+			<input class="animated infinite pulse" type="button" value="START The Race!" id="go"></input>
+			<input type="button" value="Start Over!🎬" id="reset"></input>
+			<input type="button" value="Sound On/Off🎧" id="audio"></input>
+		</header>
+		<div class="race">
+      <!-- PLAYER 1: BROWN HORSE -->
+			<img class="animated rollIn player reset-animation" id="brownHorse" src="https://media.giphy.com/media/kIUTdfkY6Y4Pm/giphy.gif"></img>
+      <!-- CATCH UP TO LAUGHING HORSE TO WIN -->
+			<img class="animated rollIn reset-animation" id="laughingHorse" src="https://media.giphy.com/media/IFZk1JnkXj8VW/giphy.gif">
+      <!-- PLAYER 2: UNICORN -->
+			<img class="animated rollIn player reset-animation" id="unicorn" src="https://media.giphy.com/media/qAaCUm3ZVsiRi/giphy.gif"></img>
+		</div>
+	</div>
+
+  <p class="contactDev">Please contact <a href="https://www.linkedin.com/in/findadammenard888/" target="_blank" >Adam</a> if something does not work for you.</p>
+</body>
+</html>
+
+
+<!-- With special thanks to Sera Bak -->
