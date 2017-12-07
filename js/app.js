@@ -2,32 +2,33 @@ $(document).ready(function() {
     var $unicorn = $('#unicorn');
     var $brownHorse = $('#brownHorse');
 
-    var audiolaughingHorse = new Audio('media/Angry-laughingHorse.mp3');
-    audiolaughingHorse.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-    }, false);
-    audiolaughingHorse.play();
 
-    //toggle button turns laughingHorse sound on/off
-    $('#audio').click(function() {
-        if (audiolaughingHorse.paused == false) {
-            audiolaughingHorse.pause();
-        } else {
-            audiolaughingHorse.play();
-            }
-        });
+    // var audiocarrot = new Audio('#');
+    // audiocarrot.addEventListener('ended', function() {
+    // this.currentTime = 0;
+    // this.play();
+    // }, false);
+    // audiocarrot.play();
+
+    // //toggle button turns *CARROT* sound on/off
+    // $('#audio').click(function() {
+    //     if (audiocarrot.paused == false) {
+    //         audiocarrot.pause();
+    //     } else {
+    //         audiocarrot.play();
+    //         }
+    //     });
 
     //click the 'catch it' button to start the game
     $('#go').click(function() {
 
-        var laughingHorseWidth = $('#laughingHorse').width();
-        var trackWidth = $(document).width() - laughingHorseWidth;
+        var carrotWidth = $('#carrot').width();
+        var trackWidth = $(document).width() - carrotWidth;
 
         $('#go').removeClass('infinite');
         $('img').removeClass('rollIn');
-        $('#laughingHorse').addClass('infinite bounce');
-        $('#laughingHorse').animate({left: trackWidth}, 4000);
+        $('#carrot').addClass('infinite bounce');
+        $('#carrot').animate({left: trackWidth}, 4000);
 
         $(document).keydown(function(key) {
 
@@ -37,9 +38,9 @@ $(document).ready(function() {
       // PLAYER 2 (UNICORN) WIN EFFECTS: WITH TROPHY DISPLAY
             if (positionOne.left + $($unicorn).width() >= trackWidth) {
                 $(document).off('keydown');
-                $('#container').append('<img id="trophy"   src="https://media.giphy.com/media/9cq3D4eqEKHx6/giphy.gif"></img>');
+                $('#container').append('<img id="trophy"   src="http://www.freepngimg.com/download/trophy/6-2-trophy-free-download-png.png"></img>');
                 $('h1').text('Congratulations 🏆Player 2!!!🥇');
-                var audio = new Audio('media/burp.wav');
+                var audio = new Audio('#');
                 audio.play();
                 $('#reset').addClass('animated infinite pulse');
                 return;
@@ -47,9 +48,9 @@ $(document).ready(function() {
       // PLAYER 1 (BROWN HORSE) WIN EFFECTS: WITH TROPHY DISPLAY
             if (positionTwo.left + $($brownHorse).width() >= trackWidth) {
                 $(document).off('keydown');
-                $('#container').append('<img id="trophy" src="https://media.giphy.com/media/9cq3D4eqEKHx6/giphy.gif"></img>');
+                $('#container').append('<img id="trophy" src="http://www.freepngimg.com/download/trophy/6-2-trophy-free-download-png.png"></img>');
                 $('h1').text('Congratulations 🏆Player 1!!!🥇');
-                var audio = new Audio('media/laugh.mp3');
+                var audio = new Audio('#');
                 audio.play();
                 $('#reset').addClass('animated infinite pulse');
                 return;
@@ -71,15 +72,15 @@ $(document).ready(function() {
 });
 
 function reset() {
-    //don't allow reset button to be clicked until laughingHorse animation is done
-    if ($('#laughingHorse').is(':animated')) {
+    //don't allow reset button to be clicked until carrot animation is done
+    if ($('#carrot').is(':animated')) {
       return false;
     }
 
     $('.player').css('left', 0);
-    $('#laughingHorse').css('left', '200px');
+    $('#carrot').css('left', '200px');
     $('#trophy').remove();
-    $('h1').text("Adam's Horse Race Game");
+    $('h1').html("Adam's Horse Race Game!");
     $('#go').addClass('infinite');
     $('img').removeClass('rollIn');
     $('h1').removeClass('slideInLeft');
@@ -89,6 +90,6 @@ function reset() {
     });
     $('img').addClass('rollIn');
     $('h1').addClass('slideInLeft');
-    $('#laughingHorse').removeClass('infinite bounce');
+    $('#carrot').removeClass('infinite bounce');
     $('#reset').removeClass('animated infinite pulse');
 }
