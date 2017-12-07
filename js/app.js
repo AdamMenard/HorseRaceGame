@@ -58,7 +58,7 @@ $(document).ready(function() {
 
             switch(key.which) {
                 case 65: // PRESS A TO MAKE PLAYER 2 GO FORWARD
-                    $unicorn.css('left', positionOne.left + 40 + 'px');
+                    $unicorn.css('left', positionOne.left + 44 + 'px');
                     break;
                 case 76: // PRESS L TO MAKE PLAYER 1 GO FORWARD
                     $brownHorse.css('left', positionTwo.left + 40 + 'px');
