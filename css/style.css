@@ -4,6 +4,7 @@
 	background-position: center;
 	background-size: cover;
 	font-family: 'Ranchers', cursive;
+  background-repeat: repeat-x;
 }
 
 header {
@@ -16,6 +17,10 @@ h1 {
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+h6 {
+  font-size: 20px;
+}
+
 p {
 	display: inline-block;
 	padding: 15px;
@@ -24,12 +29,22 @@ p {
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+body {
+  background: red;
+  background: -webkit-linear-gradient(left, red , white, blue);
+  background: -o-linear-gradient(right, red , white, blue);
+  background: -moz-linear-gradient(right, red , white, blue);
+  background: linear-gradient(to right, red , white, blue);
+}
+
 #unicorn-instructions {
 	float: left;
+  color: #00FFFF;
 }
 
 #brownHorse-instructions {
 	float: right;
+  color: #00FFFF;
 }
 
 input {
@@ -63,7 +78,7 @@ img {
 #unicorn {
 	position: relative;
 	left: 0;
-	top: -150px;
+	top: -110px;
 	width: 170px;
 }
 
@@ -82,17 +97,27 @@ img {
   	transform: translate(-50%, -50%);
 }
 
-#trophy img {
-  border-radius: 25%;
+img#trophy{
+  border-radius: 50%;
+  border: 10px groove gold;
 }
 
 .bigger {
-  font-size: 120%;
   font-weight: bold;
+  font-size: 120%;
 }
 
-.contactDev {
+p.contactDev {
   /*font-size: 90%;*/
+  text-align: center;
   color: blue;
   font-weight: light;
+}
+
+.iconShrink{
+  font-size: 80%;
+}
+
+.small {
+  font-size: 75%;
 }
